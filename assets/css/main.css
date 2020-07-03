@@ -1,0 +1,16 @@
+html, body {
+	height: 100%;
+}
+
+body{
+	background: #DE6262;
+	background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);
+	background: linear-gradient(to bottom, #FFB88C, #DE6262);
+}
+
+.btn-group-xs > .btn, .btn-xs {
+	padding: .25rem .4rem;
+	font-size: .875rem;
+	line-height: .5;
+	border-radius: .2rem;
+}
