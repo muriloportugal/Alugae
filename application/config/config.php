@@ -28,7 +28,7 @@ if ($isProduction) {
 	$config['base_url'] = 'http://hack.webcrp.com/';
 }
 else{
-	$config['base_url'] = 'http://localhost:90/hack/';
+	$config['base_url'] = 'http://localhost:90/Alugae/Alugae/';
 }
 
 /*

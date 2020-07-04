@@ -1,14 +1,5 @@
-<style>
-	.form-holder{
-		margin-top:20%;
-		margin-bottom:20%;
-		border-radius: 10px;
-		box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1);
-	}
-</style>
 <div class="container">
 	<div class="row">
-
 		<div class="col-md-4 offset-md-4">
 			<div class="card form-holder">
 				<div class="card-body">

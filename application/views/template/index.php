@@ -26,13 +26,14 @@ $mobile = true;
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
 	<link href="<?php echo base_url(); ?>assets/css/main.css" rel="stylesheet"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Rancho' rel='stylesheet'>
 </head>
 <body>
-<?php if ($this->session->userdata('id')) {
-	$this->load->view('template/header');
-} ?>
+<?php $this->load->view('template/header');?>
 
 <?php $this->load->view($subview); ?>
+
 </body>
 <!-- Jquery -->
 <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>

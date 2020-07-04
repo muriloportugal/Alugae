@@ -1,1 +1,1 @@
-<?php $this->load->view('home\login');?>
+<h1>Página Inicial</h1>

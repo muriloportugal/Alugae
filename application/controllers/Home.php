@@ -17,7 +17,7 @@ class Home extends CI_Controller
 
 	public function index()
 	{
-		$this->data['subview'] = 'home/login';
+		$this->data['subview'] = 'home/index';
 		$this->load->view('template/index', $this->data);
 	}
 

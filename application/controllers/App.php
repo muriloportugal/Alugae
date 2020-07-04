@@ -12,11 +12,17 @@ class App extends CI_Controller
 		}
 	}
 
-	public function index()
-	{
-		$this->data['subview'] = 'app/index';
-		$this->load->view('template/index', $this->data);
-	}
+    public function index()
+    {
+        $this->data['subview'] = 'app/index';
+        $this->load->view('template/index', $this->data);
+    }
+
+    public function banco()
+    {
+        $this->data['subview'] = 'app/banco';
+        $this->load->view('template/index', $this->data);
+    }
 
 	function logout()
 	{
