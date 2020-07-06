@@ -9,31 +9,52 @@ $mobile = true;
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>MEGA HACK 3ª EDIÇÃO</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NTJFRSJ');</script>
+    <!-- End Google Tag Manager -->
 
-	<!-- mobile responsive meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <title>MEGA HACK 3ª EDIÇÃO</title>
 
-	<!--Toastr-->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"/>
+    <link rel="icon" href="<?php echo base_url('assets/img/favicon.ico')?>">
 
-	<!--Font Awesome-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!--Toastr-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"/>
 
-	<link href="<?php echo base_url(); ?>assets/css/main.css" rel="stylesheet"/>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!--Bootstrap Switch Button-->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+
+    <link href="<?php echo base_url(); ?>assets/css/main.css" rel="stylesheet"/>
 
     <link href='https://fonts.googleapis.com/css?family=Rancho' rel='stylesheet'>
 </head>
 <body>
-<?php $this->load->view('template/header');?>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTJFRSJ"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-<?php $this->load->view($subview); ?>
+<?php $this->load->view('template/header'); ?>
 
+<div class="container-fluid" style="padding-bottom: 30px;">
+    <?php $this->load->view($subview); ?>
+</div>
+
+<?php $this->load->view('template/footer'); ?>
 </body>
 <!-- Jquery -->
 <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
@@ -42,33 +63,53 @@ $mobile = true;
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+<!--Bootstrap Switch Button-->
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
 <!-- Toastr -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 <!--Sweet Alert-->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+<!--Input Mask-->
+<script src="<?php echo base_url() . 'assets/'; ?>js/inputmask.js"></script>
+
+<!--Busca CEP-->
+<script src="<?php echo base_url() . 'assets/'; ?>js/consultaCEP.js"></script>
+
 <!-- Alert -->
 <script>
-	<?php
-	if ($this->session->flashdata('erroOk') != '') {?>
-	swal('Alerta!', '<?php echo $this->session->flashdata('erroOk')?>', "error");
-	<?php
-	}
-	if ($this->session->flashdata('erro') != '') {?>
-	toastr.error('<?php echo $this->session->flashdata('erro')?>', 'Alerta!');
-	<?php
-	}
-	if ($this->session->flashdata('successOk') != '') {?>
-	swal('Alerta!', '<?php echo $this->session->flashdata('successOk')?>', "success");
-	<?php
-	}
-	if ($this->session->flashdata('success') != '') {?>
-	toastr.success('<?php echo $this->session->flashdata('success')?>', 'Alerta!');
-	<?php
-	} ?>
-
-	$(document).ready(function () {
-	});
+    <?php
+    if ($this->session->flashdata('erroOk') != '') {?>
+    swal('Alerta!', '<?php echo $this->session->flashdata('erroOk')?>', "error");
+    <?php
+    }
+    if ($this->session->flashdata('erro') != '') {?>
+    toastr.error('<?php echo $this->session->flashdata('erro')?>', 'Alerta!');
+    <?php
+    }
+    if ($this->session->flashdata('successOk') != '') {?>
+    swal('Alerta!', '<?php echo $this->session->flashdata('successOk')?>', "success");
+    <?php
+    }
+    if ($this->session->flashdata('success') != '') {?>
+    toastr.success('<?php echo $this->session->flashdata('success')?>', 'Alerta!');
+    <?php
+    } ?>
+    $(document).ready(function () {
+    });
+</script>
+<script>
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 120) {
+                $('.menu .navbar').addClass('fixed-top');
+            }
+            if ($(window).scrollTop() < 10){
+                $('.menu .navbar').removeClass('fixed-top');
+            }
+        });
+    });
 </script>
 </html>

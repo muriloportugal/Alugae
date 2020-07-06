@@ -2,7 +2,7 @@
 	position: absolute;
 	width: 149px;
 	height: 80px;
-	left: 38px;
+	left: 20px;
 	top: 0px;
 
 	font-family: Rancho;
@@ -16,9 +16,26 @@
 
 a.logo:hover { color: #E81346!important;  }
 
+.info { color: #E81346!important;  }
+
 .menu{
-	margin: 20px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	margin: 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
 }
+.menu nav{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.sticky {
+	position: relative;
+	top: 0;
+	width: 100%;
+	z-index:999;
+}
+.sticky nav{
+	 box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+ }
 
 .btn-group-xs > .btn, .btn-xs {
 	padding: .25rem .4rem;
